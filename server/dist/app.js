@@ -15,7 +15,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.App = void 0;
 const dotenv_1 = require("dotenv");
 const express_1 = __importDefault(require("express"));
+require("sequelize");
 const cors_1 = __importDefault(require("cors"));
+require("./services/logger/logger.interface");
+require("./models");
 (0, dotenv_1.config)();
 class App {
     constructor(router, logger, sequelize) {
@@ -39,11 +42,11 @@ class App {
     }
     init() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.connectDB();
-            this.app.listen(this.port);
             this.app.use(express_1.default.json());
             this.app.use((0, cors_1.default)());
             this.app.use('/api', this.router);
+            yield this.connectDB();
+            this.app.listen(this.port);
             this.logger.log(`Сервер запущен на http://localhost:${this.port}`);
         });
     }
