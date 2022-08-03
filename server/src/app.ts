@@ -4,6 +4,7 @@ import { Sequelize } from 'sequelize';
 import cors from 'cors';
 
 import { ILogger } from './services/logger/logger.interface';
+import models from './models';
 
 config();
 
@@ -34,12 +35,12 @@ export class App {
 	}
 
 	public async init(): Promise<void> {
-		this.connectDB();
-
-		this.app.listen(this.port);
 		this.app.use(express.json());
 		this.app.use(cors());
 		this.app.use('/api', this.router);
+
+		await this.connectDB();
+		this.app.listen(this.port);
 
 		this.logger.log(`Сервер запущен на http://localhost:${this.port}`);
 	}
