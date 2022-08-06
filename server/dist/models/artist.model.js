@@ -9,8 +9,6 @@ const db_config_1 = __importDefault(require("../config/db.config"));
 exports.Artist = db_config_1.default.define('artist', {
     id: { type: sequelize_1.DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     nickname: { type: sequelize_1.DataTypes.STRING, unique: true, allowNull: false },
-    email: { type: sequelize_1.DataTypes.STRING, unique: true, allowNull: false },
-    password: { type: sequelize_1.DataTypes.STRING, allowNull: false },
     firstName: { type: sequelize_1.DataTypes.STRING },
     lastName: { type: sequelize_1.DataTypes.STRING },
     avatar: { type: sequelize_1.DataTypes.STRING },

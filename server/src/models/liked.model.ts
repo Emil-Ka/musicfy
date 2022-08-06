@@ -1,7 +1,12 @@
-import { DataTypes } from 'sequelize';
+import { DataTypes, InferAttributes, InferCreationAttributes, Model } from 'sequelize';
 
 import sequelize from '../config/db.config';
 
-export const Liked = sequelize.define('liked_songs', {
+interface ILiked extends Model<InferAttributes<ILiked>, InferCreationAttributes<ILiked>> {
+	id: number;
+	userId?: number;
+}
+
+export const Liked = sequelize.define<ILiked>('liked_songs', {
 	id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 });
