@@ -20,6 +20,7 @@ const cors_1 = __importDefault(require("cors"));
 const express_fileupload_1 = __importDefault(require("express-fileupload"));
 const path_1 = __importDefault(require("path"));
 require("./services/logger/logger.interface");
+const error_middleware_1 = require("./middlewares/error.middleware");
 require("./models");
 (0, dotenv_1.config)();
 class App {
@@ -49,6 +50,7 @@ class App {
             this.app.use(express_1.default.static(path_1.default.resolve(__dirname, '../..', 'static')));
             this.app.use((0, express_fileupload_1.default)({}));
             this.app.use('/api', this.router);
+            this.app.use(error_middleware_1.errorMiddleware);
             yield this.connectDB();
             this.app.listen(this.port);
             this.logger.log(`Сервер запущен на http://localhost:${this.port}`);

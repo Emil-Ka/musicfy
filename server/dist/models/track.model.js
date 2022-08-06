@@ -10,5 +10,6 @@ exports.Track = db_config_1.default.define('track', {
     id: { type: sequelize_1.DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     title: { type: sequelize_1.DataTypes.STRING, unique: true, allowNull: false },
     cover: { type: sequelize_1.DataTypes.STRING },
+    file: { type: sequelize_1.DataTypes.STRING, allowNull: false },
 });
 //# sourceMappingURL=track.model.js.map
