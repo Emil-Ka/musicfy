@@ -40,7 +40,7 @@ export class App {
 	public async init(): Promise<void> {
 		this.app.use(express.json());
 		this.app.use(cors());
-		this.app.use(express.static(path.resolve(__dirname, '../..', 'static')));
+		this.app.use(express.static(path.resolve(__dirname, '..', 'static')));
 		this.app.use(fileUpload({}));
 		this.app.use('/api', this.router);
 		this.app.use(errorMiddleware);
