@@ -1,5 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.a = void 0;
-exports.a = 'e';
+const sequelize_1 = require("sequelize");
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)();
+exports.default = new sequelize_1.Sequelize({
+    database: process.env.DB_NAME,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    host: process.env.DB_HOST,
+    port: 5432,
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false, // This line will fix new error
+        },
+    },
+});
 //# sourceMappingURL=db.config.js.map
