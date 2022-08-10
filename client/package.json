@@ -8,7 +8,7 @@
 		"start": "next start",
 		"lint": "next lint",
 		"debug": "cross-env NODE_OPTIONS='--inspect' next dev",
-		"stylelint": "stylelint \"**/*.css\" --fix"
+		"stylelint": "stylelint \"**/*.scss\" --fix"
 	},
 	"dependencies": {
 		"next": "12.2.4",
