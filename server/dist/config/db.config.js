@@ -3,9 +3,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const dotenv_1 = require("dotenv");
 (0, dotenv_1.config)();
-exports.default = new sequelize_1.Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-    dialect: 'postgres',
+exports.default = new sequelize_1.Sequelize({
+    database: process.env.DB_NAME,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     host: process.env.DB_HOST,
     port: 5432,
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false, // This line will fix new error
+        },
+    },
 });
 //# sourceMappingURL=db.config.js.map

@@ -1,0 +1,26 @@
+@import 'styles/fonts';
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 23px;
+	border-radius: 6px;
+	padding: 12px 18px;
+	transition: all 0.2s ease-in-out;
+
+	&_active {
+		background: var(--select-bg-default);
+
+		&:hover {
+			background: var(--select-bg-default) !important;
+		}
+	}
+
+	&:hover {
+		background: var(--select-bg-hover-dark);
+	}
+}
+
+.text {
+	@include font-medium();
+}
