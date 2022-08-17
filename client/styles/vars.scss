@@ -1,0 +1,77 @@
+$white: #fff;
+$black: #000;
+$gray-light: #b3b3b3;
+$gray: #434343;
+$green: #1e8d46;
+$green-light: #1ed760;
+
+$border: #afafaf;
+
+$bg-dark: #131313;
+$playlist-dark: #303030;
+$select-dark: #282828;
+$select-hover-dark: #3A3A3A;
+$track-dark: #262626;
+$avatar-dark: #0A0A0A;
+$avatar-hover-dark: #1DB954;
+$progress-bar: #c4c4c4;
+
+$bg-light: #fff;
+$playlist-light: #fff;
+$select-light: #000;
+$track-light: #fff;
+
+:root {
+	//FONTS
+	--little: 0.875rem;
+	--small: 1rem;
+	--medium: 1.25rem;
+	--average: 1.5rem;
+	--large: 1.875rem;
+	--extra-large: 2.5rem;
+	--major: 3.125rem;
+
+	//FONTS COLOR
+	--font-dark: #{$white};
+	--font-light: #{$black};
+	--font-default: var(#{--font-dark});
+
+	--font-pale-dark: #{$gray-light};
+	--font-pale-light: #{$gray};
+	--font-pale-default: var(#{--font-pale-dark});
+
+	//BODY BG
+	--body-bg-dark: #{$bg-dark};
+	--body-bg-light: #{$bg-light};
+	--body-bg-default: var(#{--body-bg-dark});
+
+	//TRACK BG
+	--track-bg-dark: #{$track-dark};
+	--track-bg-light: #{$track-light};
+	--track-bg-default: var(#{--track-bg-dark});
+
+	//PLAYLIST BG
+	--playlist-bg-dark: #{$playlist-dark};
+	--playlist-bg-light: #{$playlist-light};
+	--playlist-bg-default: var(#{--playlist-bg-dark});
+
+	//SELECT BG
+	--select-bg-dark: #{$select-dark};
+	--select-bg-light: #{$select-light};
+	--select-bg-default: var(#{--select-bg-dark});
+
+	--select-bg-hover-dark: #{$select-hover-dark};
+	--select-bg-hover-default: var(#{--select-bg-hover-dark});
+
+	//SIDEBAR BG
+	--sidebar-bg-dark: #{$black};
+	--sidebar-bg-light: #{$white};
+	--sidebar-bg-default: var(#{--sidebar-bg-dark});
+
+	//AVATAR BG
+	--avatar-bg-dark: #{$black};
+	--avatar-bg-default: var(#{--avatar-bg-dark});
+
+	--avatar-shadow-hover-dark: #{$avatar-hover-dark};
+	--avatar-shadow-hover-default: var(#{--avatar-shadow-hover-dark});
+}

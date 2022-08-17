@@ -1,0 +1,26 @@
+@import 'styles/fonts';
+
+.avatar {
+	background: var(--avatar-bg-default);
+	border-radius: 33px;
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
+	padding: 2px 30px 2px 2px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		filter: drop-shadow(0px 0px 8px var(--avatar-shadow-hover-default));
+	}
+}
+
+.icon {
+	width: 37px;
+	height: 37px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.name {
+	@include font-medium();
+}

@@ -1,0 +1,69 @@
+@mixin font-major($color: var(--font-default), $size: var(--major), $weight: 700) {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: 1.3;
+	letter-spacing: -0.07rem;
+	color: $color;
+}
+
+@mixin font-extra-large($color: var(--font-default), $size: var(--extra-large), $weight: 700) {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: 1.3;
+	letter-spacing: -0.07rem;
+	color: $color;
+}
+
+@mixin font-large($color: var(--font-default), $size: var(--large), $weight: 700) {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: 1.3;
+	letter-spacing: -0.07rem;
+	color: $color;
+}
+
+@mixin font-average($color: var(--font-default), $size: var(--average), $weight: 500) {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: 1.3;
+	letter-spacing: -0.07rem;
+	color: $color;
+}
+
+@mixin font-medium($color: var(--font-default), $size: var(--medium), $weight: 700) {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: 1.3;
+	letter-spacing: -0.07rem;
+	color: $color;
+}
+
+@mixin font-small($color: var(--font-default), $size: var(--small), $weight: 500) {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: 1.3;
+	letter-spacing: -0.07rem;
+	color: $color;
+}
+
+@mixin font-little($color: var(--font-default), $size: var(--little), $weight: 500) {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: 1.3;
+	letter-spacing: -0.07rem;
+	color: $color;
+}
