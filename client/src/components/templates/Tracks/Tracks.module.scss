@@ -1,0 +1,17 @@
+// .tracks {
+// 	width: 100%;
+// 	display: flex;
+// 	justify-content: space-around;
+// 	flex-wrap: wrap;
+// 	gap: 40px 60px;
+// 	padding-bottom: 130px;
+// }
+
+.tracks {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 200px);
+	gap: 40px 30px;
+	justify-items: center;
+	justify-content: center;
+}

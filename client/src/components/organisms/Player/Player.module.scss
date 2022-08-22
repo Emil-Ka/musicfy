@@ -1,0 +1,59 @@
+@import 'styles/fonts';
+
+.player {
+	background: var(--player-bg-default);
+	border-top: 2px solid var(--player-border-default);
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+}
+
+.container {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 18px 20px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.track {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+}
+
+.description {
+
+}
+
+.name {
+	@include font-medium();
+	display: block;
+}
+
+.artist {
+	@include font-small(var(--gray-light));
+}
+
+.progress {
+	width: 50%;
+}
+
+.buttons {
+	margin-bottom: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+}
+
+.volume {
+
+}
+
+.icon {
+	cursor: pointer;
+}

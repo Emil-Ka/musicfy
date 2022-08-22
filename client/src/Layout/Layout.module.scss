@@ -3,7 +3,7 @@
 	display: grid;
 	min-height: 100vh;
 	padding: 20px 0;
-	grid-template-columns: auto 250px minmax(320px, 1200px) auto;
+	grid-template-columns: minmax(10px, auto) 250px minmax(320px, 1200px) minmax(10px, auto);
 	grid-template-rows: 60px auto;
 	grid-template-areas:
 	'. sidebar header .'

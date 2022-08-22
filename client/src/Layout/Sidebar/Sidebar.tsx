@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import Logo from '../assets/logo.svg';
+import Logo from './assets/logo.svg';
 import { SidebarProps } from './Sidebar.props';
 
 import styles from './Sidebar.module.scss';
