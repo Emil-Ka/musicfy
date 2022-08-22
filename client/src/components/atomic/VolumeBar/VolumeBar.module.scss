@@ -1,0 +1,38 @@
+.volumeBar {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.icon {
+	cursor: pointer;
+}
+
+.input {
+	width: 100%;
+	background: var(--progress-bar-bg-default);
+	background-image: linear-gradient(var(--progress-bar-default), var(--progress-bar-default));
+	background-size: 0% 100%;
+	background-repeat: no-repeat;
+	-webkit-appearance: none;
+	border-radius: 2.5px;
+
+	&:focus {
+		outline: none;
+	}
+
+	&::-webkit-slider-runnable-track {
+		height: 5px;
+		width: 630px;
+		border-radius: 2.5px;
+		box-shadow: none;
+		border: none;
+	}
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		height: 5px;
+		width: 5px;
+		cursor: ew-resize;
+	}
+}

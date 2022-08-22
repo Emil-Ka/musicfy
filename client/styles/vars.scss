@@ -14,7 +14,9 @@ $select-hover-dark: #3A3A3A;
 $track-dark: #262626;
 $avatar-dark: #0A0A0A;
 $avatar-hover-dark: #1DB954;
-$progress-bar: #c4c4c4;
+$progress-bar-dark: #c4c4c4;
+$progress-bar-bg-dark: #535353;
+$player-bg-dark: #181818;
 
 $bg-light: #fff;
 $playlist-light: #fff;
@@ -22,6 +24,10 @@ $select-light: #000;
 $track-light: #fff;
 
 :root {
+	//COLORS
+	--green-light: #{$green-light};
+	--gray-light: #{$gray-light};
+
 	//FONTS
 	--little: 0.875rem;
 	--small: 1rem;
@@ -74,4 +80,18 @@ $track-light: #fff;
 
 	--avatar-shadow-hover-dark: #{$avatar-hover-dark};
 	--avatar-shadow-hover-default: var(#{--avatar-shadow-hover-dark});
+
+	//PROGRESS BAR
+	--progress-bar-bg-dark: #{$progress-bar-bg-dark};
+	--progress-bar-bg-default: var(#{--progress-bar-bg-dark});
+
+	--progress-bar-dark: #{$progress-bar-dark};
+	--progress-bar-default: var(#{--progress-bar-dark});
+
+	//PLAYER 
+	--player-bg-dark: #{$player-bg-dark};
+	--player-bg-default: var(#{--player-bg-dark});
+
+	--player-border-dark: #{$select-dark};
+	--player-border-default: var(#{--player-border-dark});
 }

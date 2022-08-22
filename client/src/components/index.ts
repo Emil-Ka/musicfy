@@ -1,2 +1,3 @@
 export * from './atomic';
-export * from './TrackCard/TrackCard';
+export * from './organisms';
+export * from './templates';
