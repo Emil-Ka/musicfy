@@ -10,15 +10,15 @@ import { Htag } from '../../index';
 import { shortWord } from '../../../helpers/shortWord';
 
 export const TrackCard = ({ track, className, ...props }: TrackCardProps) => {
-	const { title } = track;
+	const { title, cover, file } = track;
 
 	return (
 		<div className={cn(styles.trackCard, className)} {...props}>
 			<div className={styles.coverWrapper}>
-				<Image src={img} />
+				<Image src={cover} layout="fill" />
 			</div>
 			<Htag className={styles.title} tag="h3" size="average">
-				{shortWord('Я в этом прекрасном моменте', 11)}
+				{shortWord(title, 11)}
 			</Htag>
 			<Link href="#">
 				<a className={styles.link}>Дима Билан</a>
